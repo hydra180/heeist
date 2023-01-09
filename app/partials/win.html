@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand navbar-left" href="#">
+        <img alt="Brand" class="logo class" src="logo.jpg">
+      </a>
+      <div class="navbar-right">
+        <h1 class="money">RobberMe This</h1>
+        <ol class="breadcrumb">
+          <li><a href="/#/">Home</a></li>
+          <li><a href="/#/game">Play</a></li>
+          <li class="active">Win</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</nav>
+<h1 class="notification money">You won! <small>congratulations</small></h1>
+<div class="main">
+  <div class="win">
+    <p>You managed to walk away with <span>{{winnings | currency}}</span></p>
+    <p>That is {{bags | number: 0}} bags of money</p>
+    <img src="money-stacks-duffle-bag.jpeg" alt="" class="circle"/>
+    <span>x ({{bags | number: 0}})
+    <p>You will have needed {{men | number: 0}} men with carts</p>
+    <p ng-show="vans >= 2">You will have needed {{vans | number: 0}} drivers with vans to get out of here</p>
+    <p ng-show="vans == 1">You will have needed {{vans | number: 0}} driver with a van to get out of here</p>
+  </div>
+  <div class="win">
+    <p>Coincidentally the president ate {{winnings | number}} waffles this morning.</p>
+    <p>That is {{winnings | number}} photo ops:</p>
+    <img src="waffles.jpeg" alt="president obama eats waffles" />
+    <p>He used {{bags | number: 0}} bags of pancake mix</p>
+    <p>He needed {{men | number: 0}} men help him carry the pancake mix</p>
+    <p ng-show="vans >= 2">He needed {{vans | number: 0}} drivers with vans to get out of here</p>
+    <p ng-show="vans == 1">He needed {{vans | number: 0}} driver with a van to get the pancake mix to him</p>
+
+  </div>
+</div>
